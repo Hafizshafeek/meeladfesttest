@@ -50,28 +50,28 @@
     <tbody></tbody>
   </table>
 
-  <script>
-    window.onload = function() {
-      Tabletop.init({
-        key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vREQH-xX3gthWqiNixKNXOrfdesOfEevRESgafYmv68LQB5rNr1Xa7H4btJIbUiWw/pubhtml',
-        simpleSheet: true,
-        callback: function(data) {
-          let tbody = document.querySelector("#resultTable tbody");
-          tbody.innerHTML = "";
-          data.forEach(row => {
-            let tr = document.createElement("tr");
-            tr.innerHTML = `
-              <td>${row.Category}</td>
-              <td>${row.Class}</td>
-              <td>${row.Team}</td>
-              <td>${row.TotalMark}</td>
-              <td>${row.Rank}</td>
-            `;
-            tbody.appendChild(tr);
-          });
-        }
-      });
-    }
-  </script>
+<script>
+  window.onload = function() {
+    Tabletop.init({
+      key: '1vREQH-xX3gthWqiNixKNXOrfdesOfEevRESgafYmv68LQB5rNr1Xa7H4btJIbUiWw',
+      simpleSheet: true,
+      callback: function(data) {
+        let tbody = document.querySelector("#resultTable tbody");
+        tbody.innerHTML = "";
+        data.forEach(row => {
+          let tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${row.Category}</td>
+            <td>${row.Class}</td>
+            <td>${row.Team}</td>
+            <td>${row.TotalMark}</td>
+            <td>${row.Rank}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
